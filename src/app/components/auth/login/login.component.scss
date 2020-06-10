@@ -1,0 +1,128 @@
+@import '../../../../scss/_variables';
+
+.logo {
+    margin-top: 8px;
+
+    img {
+        width: 55px;
+    }
+}
+
+.bottom {
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+
+.header {
+    margin-bottom: 45px;
+
+    h2 {
+        color: $dark_gray;
+        text-align: center;
+        margin-bottom: 14px;
+    }
+}
+
+@media (max-width: 300px) {
+    .header {
+        h2 {
+            font-size: 25px;
+        }
+    }
+}
+
+.form-container {
+    .form-input {
+        margin-bottom: 20px;
+        position: relative;
+
+        label {
+            position: absolute;
+            margin: 0;
+            vertical-align: middle;
+            top: 0;
+            line-height: 50px;
+            height: 100%;
+            width: 100%;
+            left: 0;
+            padding-left: 13px;
+            color: #9f9e9e;
+            cursor: text;
+        }
+
+        input {
+            height: 50px;
+            color: #898888;
+        }
+    }
+
+    .note{
+        margin-top: 20px;
+        font-size: 14px;
+        text-align: center;
+    }
+
+    .remember {
+        margin-bottom: 25px;
+        padding-left: 30px;
+        font-size: 14px;
+        position: relative;
+        label {
+            margin-bottom: 0;
+            position: absolute;
+            left: 0;
+            width: 20px;
+            height: 20px;
+            background-color: #fff;
+            border: 1px solid #c9cbcc;
+            border-radius: 3px;
+            cursor: pointer;
+        }
+
+        input {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            display: none;
+        }
+
+        img {
+            width: 100%;
+            position: absolute;
+            top: 0;
+            opacity: 0;
+            transition: opacity 0.2s cubic-bezier(.41, -0.08, .02, 1.34);
+        }
+
+        input:checked+img {
+            opacity: 1;
+        }
+
+    }
+
+    .form-btn {
+        text-align: center;
+
+        .btn {
+            width: 170px;
+            padding-top: 8px;
+            padding-bottom: 14px;
+        }
+    }
+}
+
+.form-input input:focus,
+.form-input.valid input {
+    padding-top: 18px;
+}
+
+.form-input.valid label, .form-input input:focus + label {
+    line-height: 15px !important;
+    height: 21px !important;
+    font-size: 12px;
+    padding-top: 2px;
+    border-radius: 3px 3px 0 0;
+    border: 1px solid #ced4da;
+    border-bottom: #eaeaea;
+    color: #b9b9b9 !important;
+}

@@ -1,0 +1,115 @@
+.modal-content {
+    border-radius: 15px;
+    background-color: #f0f0f0;
+}
+
+.receiver-modal {
+    .modal-header {
+        padding: 1rem 2rem;
+        border-bottom: none;
+    }
+
+    .modal-title {
+        font-size: 21px;
+        color: #545454;
+        font-weight: 600;
+    }
+
+    .modal-body {
+        padding: 0 2rem 1rem;
+    }
+
+    .caller-id {
+        display: flex;
+
+        .caller-image {
+            height: 48px;
+            width: 48px;
+            border-radius: 50%;
+            background-color: #e4e4e4;
+            margin-right: 15px;
+
+            img {
+                height: 100%;
+                width: 100%;
+                object-fit: cover;
+                border-radius: 50%;
+            }
+        }
+
+        .caller-details {
+            color: #626262;
+            font-size: 17px;
+            line-height: 44px;
+        }
+    }
+
+    .modal-footer {
+        border-top-color: #d5d7d8;
+        display: block;
+        padding-right: 85px;
+        padding-left: 85px;
+
+        .receiver-btn {
+            border: none;
+            margin: 0;
+            padding: 0;
+            width: 53px;
+            transition: opacity, color 0.2s ease-in-out;
+            background-color: transparent;
+
+            .icon {
+                background-position: center;
+                background-size: 74%;
+                background-repeat: no-repeat;
+                height: 35px;
+                width: 100%;
+            }
+
+            .icon-label {
+                font-size: 12px;
+                color: #717171;
+            }
+
+            &:hover{
+                .icon{
+                    opacity: 0.7;
+                }
+                .icon-label{
+                    color: #898989;
+                }
+            }
+
+            &:focus{
+                outline: none;
+            }
+
+            &:active{
+                .icon{
+                    opacity: 1;
+                }
+                .icon-label{
+                    color: #717171;
+                }
+            }
+        }
+
+        .receiver-btn.call-decline {
+            .icon {
+                background-image: url('../assets/img/icons/decline.png');
+            }
+        }
+
+        .receiver-btn.call-accept {
+            float: right;
+
+            .icon.voice {
+                background-image: url('../assets/img/icons/call.png');
+            }
+
+            .icon.video {
+                background-image: url('../assets/img/icons/video_call.png');
+            }
+        }
+    }
+}

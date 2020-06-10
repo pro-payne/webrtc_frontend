@@ -1,0 +1,43 @@
+@import '../../../scss/_variables';
+.container{
+    margin-bottom: 60px;
+}
+
+.boom{
+    text-align: center;
+}
+
+.welcome-image{
+    margin-top: 135px;
+    margin-bottom: 20px;
+}
+
+.header{
+    margin-bottom: 75px;
+    h2{
+        color: $dark_gray;
+        margin-bottom: 14px;
+    }
+    h4{
+        color: $gray;
+        font-size: 20px;
+        margin: 0;
+    }
+}
+@media (max-width: 300px){
+    .header{
+        h2{
+            font-size: 25px;
+        }
+        h4{
+            font-size: 16px;
+            padding: 0 9px;
+        }
+    }
+}
+.btn-purple {
+    width: 150px;
+    padding-top: 6px;
+    padding-bottom: 8px;
+    margin-bottom: 15px;
+}

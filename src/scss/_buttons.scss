@@ -1,0 +1,42 @@
+.btn.focus, .btn:focus {
+    outline: 0;
+    box-shadow: none;
+}
+
+.form-control:focus {
+    border-color: #ced4da;
+    box-shadow: none;
+
+}
+
+.btn-purple {
+    color: #F7F7F7;
+    background-image: linear-gradient(170deg, #F321EC, #5115C0);
+    transition: background-image 0.2s ease-in-out, box-shadow 0.2s ease-out;
+    border: none;
+    &:hover {
+        color: #F7F7F7;
+        background-image: linear-gradient(150deg, #F321EC, #5115C0);
+    }
+    &:active{
+        box-shadow: inset 0 0 15px #571f8f;
+    }
+}
+
+.btn-green {
+    color: #F7F7F7;
+    background-image: linear-gradient(170deg, #65B168, #2D6F2F);
+    transition: background-image 0.2s ease-in-out, box-shadow 0.2s ease-out;
+    border: none;
+    &:hover {
+        color: #F7F7F7;
+        background-image: linear-gradient(150deg, #65B168, #2D6F2F);
+    }
+    &:active{
+        box-shadow: inset 0 0 15px #1C441D;
+    }
+}
+
+.btn-radius {
+    border-radius: 30px;
+}

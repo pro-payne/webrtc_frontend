@@ -1,0 +1,48 @@
+<div class="container">
+  <div class="row">
+    <div class="col-md-12 logo">
+      <div>
+        <img src="../../../../assets/img/icons/boom.png" alt="">
+      </div>
+    </div>
+  </div>
+  <div class="row bottom">
+    <div class="col-md-3"></div>
+    <div class="col-md-6">
+      <div class="header">
+        <h2>Create An Account</h2>
+      </div>
+      <div class="form-container">
+        <form action="">
+          <div class="form-input">
+            <input type="text" name="first_name" (keyup)="valueCheck($event)" (change)="valueCheck($event)" id="first_name"
+              class="form-control">
+            <label for="first_name">First Name</label>
+          </div>
+          <div class="form-input">
+            <input type="text" name="last_name" (keyup)="valueCheck($event)" (change)="valueCheck($event)"
+              id="last_name" class="form-control">
+            <label for="last_name">Last Name</label>
+          </div>
+          <div class="form-input">
+            <input type="email" name="email" (keyup)="valueCheck($event)" (change)="valueCheck($event)" id="email"
+              class="form-control">
+            <label for="email">Email</label>
+          </div>
+          <div class="form-input">
+            <input type="password" name="password" (keyup)="valueCheck($event)" (change)="valueCheck($event)"
+              id="password" class="form-control">
+            <label for="password">Password</label>
+          </div>
+          <div class="form-btn">
+            <button type="button" class="btn btn-radius btn-purple">Register</button>
+          </div>
+          <div class="note">
+            Already have an account? <a routerLink="../login" title="Login">Login</a>
+          </div>
+        </form>
+      </div>
+    </div>
+    <div class="col-md-3"></div>
+  </div>
+</div>

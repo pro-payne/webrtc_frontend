@@ -1,0 +1,43 @@
+<div class="container">
+  <div class="row">
+    <div class="col-md-12 logo">
+      <div>
+        <img src="../../../../assets/img/icons/boom.png" alt="">
+      </div>
+    </div>
+  </div>
+  <div class="row bottom">
+    <div class="col-md-3"></div>
+    <div class="col-md-6">
+      <div class="header">
+        <h2>Login To Account</h2>
+      </div>
+      <div class="form-container">
+        <form action="">
+          <div class="form-input">
+            <input type="email" name="email" (keyup)="valueCheck($event)" (change)="valueCheck($event)" id="email" class="form-control">
+            <label for="email">Email</label>
+          </div>
+          <div class="form-input">
+            <input type="password" name="password" (keyup)="valueCheck($event)" (change)="valueCheck($event)" id="password" class="form-control">
+            <label for="password">Password</label>
+          </div>
+          <div class="remember">
+            <label for="remember">
+              <input type="checkbox" name="remember" id="remember">
+              <img src="../../../../assets/img/icons/check.png" alt="">
+            </label>
+            <span>Remember me</span>
+          </div>
+          <div class="form-btn">
+            <a routerLink="../dashboard" class="btn btn-radius btn-green">Login</a>
+          </div>
+          <div class="note">
+            Don't have an account? <a routerLink="../register" title="Create an account">Register</a>
+          </div>
+        </form>
+      </div>
+    </div>
+    <div class="col-md-3"></div>
+  </div>
+</div>

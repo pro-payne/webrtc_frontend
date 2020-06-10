@@ -1,0 +1,90 @@
+<div class="container main-container">
+  <div id="dashboard-row" class="row">
+    <div class="col-md-4">
+      <header>
+        <div class="container">
+          <div class="row">
+            <div class="col-md-12 logo">
+              <div>
+                <img src="../../../assets/img/icons/boom.png" alt="">
+                <div class="menu">
+                  <i class="fa fa-ellipsis-v"></i>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div style="color: #fff;" id="connection-status"></div>
+      </header>
+      <div class="row content">
+        <div class="col-md-3"></div>
+        <div class="col-md-6">
+          <div class="contact-container">
+            <div class="search">
+              <input type="search" placeholder="Search" name="search" id="search">
+            </div>
+            <div class="d-none">
+              <img height="0" width="0" src="../../../assets/img/icons/white_call.png" alt="">
+              <img height="0" width="0" src="../../../assets/img/icons/white_video_call.png" alt="">
+            </div>
+            <div class="contact-list">
+              <div *ngFor="let user of onlineusers" class="contact online">
+                <div class="item">
+                  <div class="item-image">
+                    <img src="../../../assets/img/icons/user.png" alt="">
+                    <span class="status"></span>
+                  </div>
+                  <div class="item-details">
+                    <div class="item-name" title="Sihle Socishe">{{user.uid}}</div>
+                    <div class="item-email" title="sihlesocishe@gmail.com">sihlesocishe@gmail.com</div>
+                  </div>
+                  <div class="action-icons">
+                    <div class="voice" title="Voice Call" (click)="localCall($event, user.uid, 'voice')" role="button"></div>
+                    <div class="video" title="Video Call" (click)="localCall($event, user.uid, 'video')" role="button"></div>
+                    <div class="call-state"></div>
+                  </div>
+                </div>
+              </div>
+              <div id="error" style="color:white;background-color:black;padding:3px 2px;"></div>
+              <div *ngIf="onlineusers.length == 0"><h1 class="zero-users">No online users</h1></div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-3"></div>
+      </div>
+    </div>
+    <div class="col-md">
+      <div class="media-container">
+        <div class="media-status">
+          <div class="media-user">Recipient</div>
+          <div class="media-state">Connecting...</div>
+        </div>
+        <div class="incoming-media">
+          <div class="overlay" style="background-image: url('../../../assets/img/rdj.jpg');"></div>
+          <div class="media-content">
+            <video id="incoming-stream" class="stream" autoplay></video>
+            <audio id="incoming-tone" loop hidden class="d-none" src="../../../assets/media/tones/tone.1.mp3"></audio>
+          </div>
+        </div>
+        <div class="outgoing-media">
+          <video id="outgoing-stream" class="stream" autoplay></video>
+        </div>
+        <div class="media-controls">
+          <div>
+            <button class="media-btn microphone" [class.mute]="!mute" #microphone (click)="mediaControl(microphone, 'mute')">
+              <span class="mute"></span>
+              <span class="mic"></span>
+            </button>
+            <button class="media-btn end-call" (click)="dropCall()">
+              <span class="drop-call"></span>
+            </button>
+            <button class="media-btn video" [class.no_video]="!video" #videoElement (click)="mediaControl(videoElement, 'no_video')">
+              <span class="no_video"></span>
+              <span class="live-video"></span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

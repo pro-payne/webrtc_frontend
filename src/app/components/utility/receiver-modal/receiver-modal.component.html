@@ -1,0 +1,23 @@
+<div class="modal-header">
+  <h5 class="modal-title">{{title}}</h5>
+</div>
+<div class="modal-body">
+  <div class="caller-id">
+    <div class="caller-image">
+      <img src="{{caller.image}}" alt="">
+    </div>
+    <div class="caller-details">
+      {{caller.name}}
+    </div>
+  </div>
+</div>
+<div class="modal-footer">
+  <button type="button" class="receiver-btn call-decline" (click)="callRespond('reject')">
+    <div class="icon"></div>
+    <div class="icon-label">Decline</div>
+  </button>
+  <button type="button" class="receiver-btn call-accept" (click)="callRespond('accept')">
+    <div class="icon" [class.voice]="callType == 'voice'" [class.video]="callType == 'video'"></div>
+    <div class="icon-label">Accept</div>
+  </button>
+</div>
